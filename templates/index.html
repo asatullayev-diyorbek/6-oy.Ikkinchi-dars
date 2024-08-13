@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+	{{ title }}
+{% endblock %}
+
+
+{% block content %}
+    
+    <!-- our class -->
+    {% include 'components/class.html' %}
+    <!-- end our class -->
+    <!-- about -->
+    {% include 'components/about.html' %}
+    <!-- end about -->
+    <!-- skating -->
+    {% include 'components/skatching.html' %}
+    <!-- end skating -->
+    <!-- shop -->
+    {% include 'components/shop.html' %}
+    <!-- end shop -->
+    <!-- testimonial -->
+    {% include 'components/testimonial.html' %}
+    <!-- end testimonial -->
+{% endblock %}

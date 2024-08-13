@@ -1,0 +1,70 @@
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-12 pt-3">
+            <div class="titlepage text_align_center">
+                <h2>Mahsulotlar ({{ count }})</h2>
+            </div>
+        </div>
+        {% for product in products %}
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <img src="{{ product.image.url }}" alt="{{ product.name }}" class="card-img-top">
+                        <h1 class="card-title">{{ product.title }}</h1>
+                        <p class="card-price">${{ product.price }}</p>
+                        <p class="card-sizes">Sizes: {{ product.size }}</p>
+                        <p class="card-sizes">Count: {{ product.count }}</p>
+                        <p class="card-colors">Colors:
+                            {{ product.color }} <span style="background-color: {{ product.color }}; width: 20px; height: 20px; display: inline-block; border-radius: 50%; border: 1px solid black"></span>
+                        </p>
+                        <a href="#" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+
+
+<style>
+    /* styles.css */
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(.90);
+}
+
+.card-img-top {
+    width: 200px;
+    height: 300px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-price {
+    font-size: 1.25rem;
+    color: #48cfad;
+}
+
+.card-sizes, .card-colors {
+    margin-top: 10px;
+}
+
+.card-colors span {
+    margin-right: 5px;
+}
+
+</style>
