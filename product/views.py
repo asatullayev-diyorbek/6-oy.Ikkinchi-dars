@@ -5,7 +5,7 @@ from .models import Product
 def product(request):
     products = Product.objects.all()
     context = {
-        "title": 'Proudct sahifasi Qo\'shimcha',
+        "title": 'Product sahifasi Qo\'shimcha',
         'products': products,
         'count': len(products),
     }
